@@ -49,11 +49,40 @@ table {
 
 * {
     box-sizing: border-box;
+    max-width: 100%;
+
 }
 
 html{
     font-size:62.5%;
 }
+
+#nav-container{ 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.logo{
+   width:15%;
+    margin-top: 20px;
+   
+}
+
+#nav-container a {
+    color:black;
+    text-decoration: none;
+    margin-top:20px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+}
+
+
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height:1.5;
@@ -71,14 +100,22 @@ section, footer{
 .container {
     width: 80%;
     margin: 0 auto;
+    align-items: center;
 }
 
 /*Top Section Styles*/
 
+#jumbo{
+    margin-top: 50px;
+    margin-left: 10%;
+    width:80%;
+    
+}
+
 .top-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 4%;
     border-bottom: 2px solid #ff4b00;
     text-align: justify;
@@ -93,16 +130,60 @@ section, footer{
 /*Middle Section Styles*/
 .middle-content {
     margin-bottom: 4%;
+    border-bottom: 2px solid #ff4b00;
+    
+    
 }
 
 .middle-content h2 {
     margin-bottom: 0;
+    
 }
+
+.box{
+    height:220px;
+    width:220px;
+}
+#box1{
+    background-color:teal;
+}
+
+#box2{
+    background:gold;
+}
+#box3{
+    background:cadetblue;
+}
+#box4{
+    background:coral;
+}
+#box5{
+    background:crimson;
+}
+#box6{
+    background:forestgreen;
+}
+#box7{
+    background:darkorchid;
+}
+#box8{
+    background:hotpink;
+}
+#box9{
+    background:indigo;
+}
+#box10{
+    background:dodgerblue; 
+}
+
 
 .middle-content .boxes {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow:row wrap;
     justify-content: space-between;
+    align-items:center;
+    
+    
 }
 
 .middle-content .boxes .box {
@@ -118,10 +199,12 @@ section, footer{
 .bottom-content {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .bottom-content .text-container {
     width:25%;
+    
 }
 
 .bottom-content .text-container:last-child {
@@ -130,11 +213,110 @@ section, footer{
 
 /*Footer Styles*/
 footer {
+    /*display:flex;
+    justify-content: space-evenly;*/
     width: 100%;
-    background-color: #ff4b00;
+    background-color:#ff4b00;
+}
+#footlink{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#footlink a {
+    text-decoration: none;
+    color:white;
 }
 
 /*About Page Styles*/
+.container about-page {
+    display: flex;
+    flex-flow:column nowrap;
+}
 
+.about-flex-container {
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+.about-section {
+    width: 40%;
+    margin-top: 50px;
+
+}
+
+.aboot-img{
+    width: 100%;
+}
+
+
+
+hr {
+    border-top: 2px solid orange;
+    margin-top: 30px;
+}
+
+.bottom-div {
+    margin: 50px 0;
+}
+
+.about-div {
+    margin-top: 20px;
+}
 
 /*Responsive Styles*/
+
+@media screen and (max-width:500px){
+
+    #nav-container {
+        flex-flow:column wrap;
+        align-items: center;
+        
+    }
+    .logo{
+        width:35%;
+        margin-top: 25px;
+    }
+    .top-content{
+        flex-flow:column wrap;
+        align-content: center;
+}
+.top-content .text-container{
+    width:90%;
+}
+
+h2 {
+    text-align: center;
+}
+.box{
+    height:150px;
+    width:150px;
+}
+
+#footlink {
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.bottom-content{
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.bottom-content .text-container{
+    width: 90%;
+}
+
+.about-flex-container {
+    flex-flow:column wrap;
+    align-items: center;
+
+}
+.about-section{
+    width:100%;
+}
+
+        
+}
+
